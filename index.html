@@ -30,12 +30,20 @@
         <a href="#">Home</a>
         <a href="">About</a>
         <a href="">Contact</a>
+        <button id="close">X</button>
     </nav>
 </div>
 <script>
    document.querySelector("button").addEventListener("click", function(){
        document.querySelector("#mobile_menu").classList.add("show")
    })
+
+   document.querySelector("#close").addEventListener("click", function(){
+       // document.querySelector("#mobile_menu").classList.remove("show")
+       document.querySelector("#mobile_menu").classList.add("hide")
+   })
+
+
 </script>
 </body>
 </html>

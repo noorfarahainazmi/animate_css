@@ -48,7 +48,8 @@
     bottom: 0;
     left:0;
     right: 0;
-    display: none
+    display: none;
+
 }
 #mobile_cta{
     display: none;
@@ -74,6 +75,13 @@
 .show{
     /*!important overrides all*/
     display: block !important;
+    animation: showmenu .35s ease-in-out;
+}
+
+.hide{
+    /*!important overrides all*/
+    /*display: block !important;*/
+    animation: hidemenu .35s ease-in-out;
 }
 .flex{
     display: flex;
@@ -89,11 +97,22 @@
 
 @keyframes showmenu {
     0%{
-        display: none
+        transform: translateX(100%);
     }
 
     100%{
-        display: flex
+        transform: translateX(0%);
+    }
+}
+
+/*rotate(90deg)  */
+@keyframes hidemenu {
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(100%);
     }
 }
 
